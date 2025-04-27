@@ -325,6 +325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 109708418}
+  - component: {fileID: 109708419}
   m_Layer: 5
   m_Name: TimerUI
   m_TagString: Untagged
@@ -353,6 +354,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &109708419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109708417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5605c507826c8cb4d85999d3432f1aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerRotatableTransform: {fileID: 776409791}
+  _timerText: {fileID: 591457005}
 --- !u!1 &133190195
 GameObject:
   m_ObjectHideFlags: 0
