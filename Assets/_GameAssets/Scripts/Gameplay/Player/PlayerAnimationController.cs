@@ -22,6 +22,11 @@ public class PlayerAnimationController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.GetCurrentGameState() != GameState.Play
+        && GameManager.Instance.GetCurrentGameState() != GameState.Resume)
+        {
+            return;
+        }
         SetPlayerAnimations();
     }
 
