@@ -2,6 +2,10 @@ using JetBrains.Annotations;
 
 public class Consts
 {
+    public struct SceneNames
+    {
+        public const string GAME_SCENE = "GameScene";
+    }
     public struct WheatTypes
     {
         public const string HOLY_WHEAT = "HolyWheat";
@@ -19,4 +23,5 @@ public class Consts
     {
         public const string IS_SPATULA_JUMPING = "IsSpatulaJumping";
     }
+
 }
