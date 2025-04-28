@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using MaskTransitions;
 
 public class WinPopup : MonoBehaviour
 {
@@ -15,10 +16,15 @@ public class WinPopup : MonoBehaviour
     {
         _timerText.text = _timerUI.GetFinalTime();
         _doBetterButton.onClick.AddListener(OnDoBetterButtonClicked);
+
+        _mainMenuButton.onClick.AddListener(() =>
+        {
+            TransitionManager.Instance.LoadLevel(Consts.SceneNames.MENU_SCENE, 0.25f);
+        });
     }
 
     private void OnDoBetterButtonClicked()
     {
-        SceneManager.LoadScene(Consts.SceneNames.GAME_SCENE);
+        TransitionManager.Instance.LoadLevel(Consts.SceneNames.GAME_SCENE, 0.25f);
     }
 }
