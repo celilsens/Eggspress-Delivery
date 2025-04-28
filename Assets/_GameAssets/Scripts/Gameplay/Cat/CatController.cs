@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public class CatController : MonoBehaviour
 {
     public event Action OnCatCatched;
+
     [Header("References")]
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private Transform _playerTransform;
@@ -19,13 +20,12 @@ public class CatController : MonoBehaviour
     [SerializeField] private int _maxDestinationAttempts = 10;
     [SerializeField] private float _chaseDistance = 2f;
     [SerializeField] private float _chaseDistanceThreshold = 1.5f;
+
     private NavMeshAgent _catAgent;
     private CatStateController _catStateController;
-
     private float _timer;
     private bool _isWaiting;
     private bool _isChasing;
-
     private Vector3 _initalPosition;
 
     private void Awake()
@@ -39,6 +39,7 @@ public class CatController : MonoBehaviour
         _initalPosition = transform.position;
         SetRandomDestination();
     }
+
     private void Update()
     {
         SetPatrolMovement();
@@ -94,6 +95,7 @@ public class CatController : MonoBehaviour
             }
         }
     }
+    
     private void SetRandomDestination()
     {
         int attempts = 0;

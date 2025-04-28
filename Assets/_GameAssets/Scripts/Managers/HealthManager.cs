@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-
     public static HealthManager Instance { get; private set; }
-
     public event Action OnPlayerDeath;
 
     [Header("References")]
@@ -19,6 +17,7 @@ public class HealthManager : MonoBehaviour
     {
         Instance = this;
     }
+    
     void Start()
     {
         _currentHealth = _maxHealth;

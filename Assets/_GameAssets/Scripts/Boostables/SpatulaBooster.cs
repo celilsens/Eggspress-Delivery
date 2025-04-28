@@ -9,6 +9,7 @@ public class SpatulaBooster : MonoBehaviour, IBoostable
     [SerializeField] private float _jumpForce;
     
     private bool _isBActivated;
+
     public void Boost(PlayerController playerController)
     {
         if (_isBActivated) { return; }
@@ -19,7 +20,9 @@ public class SpatulaBooster : MonoBehaviour, IBoostable
         playerRigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
         _isBActivated = true;
         Invoke(nameof(ResetActivation),0.2f);
+        AudioManager.Instance.Play(SoundType.SpatulaSound);
     }
+    
     private void PlayBoostAnimation()
     {
         _spatulaAnimator.SetTrigger(Consts.OtherAnimations.IS_SPATULA_JUMPING);

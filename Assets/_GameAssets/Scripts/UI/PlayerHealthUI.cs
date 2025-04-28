@@ -1,5 +1,4 @@
 using DG.Tweening;
-using NUnit.Framework.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +14,6 @@ public class PlayerHealthUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _scaleDuration;
 
-
     private RectTransform[] _playerHealthTransforms;
 
     void Awake()
@@ -25,18 +23,6 @@ public class PlayerHealthUI : MonoBehaviour
         {
             _playerHealthTransforms[i] = _playerHealthImages[i].gameObject.GetComponent<RectTransform>();
         }
-    }
-
-    private void Update()
-    {
-     //For TEST   
-     if(Input.GetKeyDown(KeyCode.O)){
-        AnimateDamage();
-     }
-     //For TEST   
-     if(Input.GetKeyDown(KeyCode.P)){
-        AnimateDamageForAll();
-     }
     }
 
     public void AnimateDamage()

@@ -16,5 +16,4 @@ public class WheatDesignSO : ScriptableObject
    public Sprite PassiveSprite => _passiveSprite;
    public Sprite ActiveWheatSprite=> _acitveWheatSprite;
    public Sprite PassiveWheatSprite=> _passiveWheatSprite;
-
 }

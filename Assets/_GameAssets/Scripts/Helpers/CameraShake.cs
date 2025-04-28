@@ -1,11 +1,9 @@
 using System.Collections;
-using System.Threading;
 using Unity.Cinemachine;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour
 {
-
     public static CameraShake Instance { get; private set; }
     private CinemachineBasicMultiChannelPerlin _cinemachineBasicMultiChannelPerlin;
     private float _shakeTimer;

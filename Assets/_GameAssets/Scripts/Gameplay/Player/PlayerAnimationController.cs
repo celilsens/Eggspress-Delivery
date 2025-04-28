@@ -1,9 +1,9 @@
-using System;
 using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private Animator _playerAnimator;
+
     private PlayerController _playerController;
     private StateController _stateControler;
 
@@ -15,8 +15,6 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Start()
     {
-
-        
         _playerController.onPlayerJumped += PlayerController_OnPlayerJumped;
     }
 
@@ -32,17 +30,17 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void PlayerController_OnPlayerJumped()
     {
-        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING,true);
-        Invoke(nameof(ResetJumping),0.5f);
+        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, true);
+        Invoke(nameof(ResetJumping), 0.5f);
     }
-    private void ResetJumping(){
-        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING,false);
-        
+
+    private void ResetJumping()
+    {
+        _playerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, false);
     }
 
     private void SetPlayerAnimations()
     {
-
         var currentState = _stateControler.GetCurrentState();
 
         switch (currentState)
@@ -66,7 +64,6 @@ public class PlayerAnimationController : MonoBehaviour
                 _playerAnimator.SetBool(Consts.PlayerAnimations.IS_SLIDING, true);
                 _playerAnimator.SetBool(Consts.PlayerAnimations.IS_SLIDING_ACTIVE, true);
                 break;
-
         }
     }
 }

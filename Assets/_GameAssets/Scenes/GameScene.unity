@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 45277780}
   - component: {fileID: 45277779}
   - component: {fileID: 45277778}
+  - component: {fileID: 45277782}
   - component: {fileID: 45277781}
   m_Layer: 5
   m_Name: TryAgainButton
@@ -483,6 +484,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &45277782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45277776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &47259723
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,6 +664,7 @@ GameObject:
   - component: {fileID: 88399441}
   - component: {fileID: 88399440}
   - component: {fileID: 88399439}
+  - component: {fileID: 88399443}
   - component: {fileID: 88399442}
   m_Layer: 5
   m_Name: MainMenuButton
@@ -783,6 +797,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &88399443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88399437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &88929745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8526600525449290414, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
@@ -2206,8 +2232,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.02722659, y: -0.948571, z: 0.08722698, w: -0.3030894}
-  m_LocalPosition: {x: -18.653076, y: -1.9937243, z: 49.39305}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 24.5, y: 2.51118, z: 5.7300005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2474,6 +2500,7 @@ Transform:
   - {fileID: 667582103}
   - {fileID: 1433372561}
   - {fileID: 180202609}
+  - {fileID: 495446149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &366649347
@@ -3366,6 +3393,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 478185889}
   m_CullTransparentMesh: 1
+--- !u!1001 &495446148
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 357674463}
+    m_Modifications:
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566621159781197235, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+--- !u!4 &495446149 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3241857335102535797, guid: 80f63d0254ef0dd49831c43a54ad665f, type: 3}
+  m_PrefabInstance: {fileID: 495446148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &495566258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3441,8 +3530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -4711,6 +4800,7 @@ GameObject:
   - component: {fileID: 773174929}
   - component: {fileID: 773174928}
   - component: {fileID: 773174927}
+  - component: {fileID: 773174931}
   - component: {fileID: 773174930}
   m_Layer: 5
   m_Name: ResumeButton
@@ -4843,6 +4933,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &773174931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773174925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &776409790
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,6 +5259,7 @@ GameObject:
   - component: {fileID: 822667387}
   - component: {fileID: 822667386}
   - component: {fileID: 822667389}
+  - component: {fileID: 822667390}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -5287,6 +5390,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &822667390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822667384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -6208,6 +6323,7 @@ GameObject:
   - component: {fileID: 999763955}
   - component: {fileID: 999763954}
   - component: {fileID: 999763953}
+  - component: {fileID: 999763957}
   - component: {fileID: 999763956}
   m_Layer: 5
   m_Name: SoundButton
@@ -6339,6 +6455,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &999763957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999763951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1007976205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7394,8 +7522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 3
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -8073,8 +8201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 2
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -8265,6 +8393,7 @@ GameObject:
   - component: {fileID: 1201675150}
   - component: {fileID: 1201675149}
   - component: {fileID: 1201675148}
+  - component: {fileID: 1201675152}
   - component: {fileID: 1201675151}
   m_Layer: 5
   m_Name: MusicButton
@@ -8396,6 +8525,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1201675152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201675146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203867561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8939,6 +9080,7 @@ GameObject:
   - component: {fileID: 1277736022}
   - component: {fileID: 1277736021}
   - component: {fileID: 1277736020}
+  - component: {fileID: 1277736024}
   - component: {fileID: 1277736023}
   m_Layer: 5
   m_Name: MainMenuButton
@@ -9071,6 +9213,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1277736024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277736018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1296864723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9695,6 +9849,7 @@ GameObject:
   - component: {fileID: 1416650122}
   - component: {fileID: 1416650121}
   - component: {fileID: 1416650120}
+  - component: {fileID: 1416650124}
   - component: {fileID: 1416650123}
   m_Layer: 5
   m_Name: MainMenuButton
@@ -9827,6 +9982,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1416650124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416650118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1419265107 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7110152311687932478, guid: c0346a7d357dcd84db09e20cf1980290, type: 3}
@@ -11436,6 +11603,7 @@ GameObject:
   - component: {fileID: 1727519457}
   - component: {fileID: 1727519456}
   - component: {fileID: 1727519455}
+  - component: {fileID: 1727519459}
   - component: {fileID: 1727519458}
   m_Layer: 5
   m_Name: DoBetterButton
@@ -11568,6 +11736,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1727519459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727519453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf6a15dfae97944993045c1a328fd2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1732571863
 GameObject:
   m_ObjectHideFlags: 0
@@ -12093,8 +12273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -12181,6 +12361,10 @@ MonoBehaviour:
   _soundButton: {fileID: 999763953}
   _resumeButton: {fileID: 773174927}
   _mainMenuButton: {fileID: 1416650120}
+  _musicActiveSprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
+  _musicPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
+  _soundActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
+  _soundPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
   _animationDuration: 0.3
 --- !u!4 &1881977798 stripped
 Transform:

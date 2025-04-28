@@ -6,6 +6,7 @@ public class RottenWheatCollectible : MonoBehaviour, ICollectible
     [SerializeField] private PlayerController _playerControler;
     [SerializeField] private WheatDesignSO _wheatDesignSO;
     [SerializeField] private PlayerStateUI _playerStateUI;
+
     private RectTransform _playerBoosterTranform;
     private Image _playerBoosterImage;
 
@@ -14,6 +15,7 @@ public class RottenWheatCollectible : MonoBehaviour, ICollectible
         _playerBoosterTranform = _playerStateUI.GetBoosterSlowTransform;
         _playerBoosterImage = _playerBoosterTranform.GetComponent<Image>();
     }
+    
     public void Collect()
     {
         _playerControler.SetMovementSpeed(_wheatDesignSO.IncreaseDecreaseMultiplier, _wheatDesignSO.ResetBoostDuration);
@@ -23,6 +25,8 @@ public class RottenWheatCollectible : MonoBehaviour, ICollectible
         _wheatDesignSO.ActiveWheatSprite, _wheatDesignSO.PassiveWheatSprite, _wheatDesignSO.ResetBoostDuration);
 
         CameraShake.Instance.ShakeCamera(0.5f, 0.5f);
+
+        AudioManager.Instance.Play(SoundType.PickupBadSound);
 
         Destroy(gameObject);
     }

@@ -12,7 +12,6 @@ public class ThirdPersonCameraController : MonoBehaviour
 
     private void Update()
     {
-
         if (GameManager.Instance.GetCurrentGameState() != GameState.Play
         && GameManager.Instance.GetCurrentGameState() != GameState.Resume)
         {
@@ -31,7 +30,6 @@ public class ThirdPersonCameraController : MonoBehaviour
         if (inputDirection != Vector3.zero)
         {
             _playerVisualTransform.forward = Vector3.Slerp(_playerVisualTransform.forward, inputDirection.normalized, Time.deltaTime * _rotationSpeed);
-
         }
     }
 }

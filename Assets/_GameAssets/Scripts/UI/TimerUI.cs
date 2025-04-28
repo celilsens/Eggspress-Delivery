@@ -1,5 +1,3 @@
-using System;
-using System.Linq.Expressions;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -12,7 +10,6 @@ public class TimerUI : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float _rotationDuration = 60;
     [SerializeField] private Ease _rotationEase;
-
 
     private float _elapsedTime;
     private bool _isTimerRunning;

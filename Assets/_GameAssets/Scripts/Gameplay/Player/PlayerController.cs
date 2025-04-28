@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
     private float _startingMovementSpeed;
     private float _startingJumpForce;
     private Rigidbody _playerRigidbody;
-
     private float _horizontalInput, _verticalInput;
     private Vector3 _movementDirection;
     private bool _isSliding;
@@ -51,6 +50,7 @@ public class PlayerController : MonoBehaviour
         _startingMovementSpeed = _movementSpeed;
         _startingJumpForce = _jumpForce;
     }
+
     private void Update()
     {
         if (GameManager.Instance.GetCurrentGameState() != GameState.Play
@@ -92,8 +92,10 @@ public class PlayerController : MonoBehaviour
             _canJump = false;
             SetPlayerJumping();
             Invoke(nameof(ResetJumping), _jumpCooldown);
+            AudioManager.Instance.Play(SoundType.JumpSound);
         }
     }
+
     private void SetStates()
     {
         var movementDirection = GetMovementDirection();
@@ -156,47 +158,57 @@ public class PlayerController : MonoBehaviour
             _playerRigidbody.linearVelocity = new Vector3(limitedVelocity.x, _playerRigidbody.linearVelocity.y, limitedVelocity.z);
         }
     }
+
     private void SetPlayerJumping()
     {
         onPlayerJumped?.Invoke();
         _playerRigidbody.linearVelocity = new Vector3(_playerRigidbody.linearVelocity.x, 0f, _playerRigidbody.linearVelocity.z);
         _playerRigidbody.AddForce(transform.up * _jumpForce, ForceMode.Impulse);
     }
+
     private void ResetJumping()
     {
         _canJump = true;
     }
+
     #region Helper Functions
     private bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, _playerHeight * 0.5f + 0.2f, _groundLayer);
     }
+
     private Vector3 GetMovementDirection()
     {
         return _movementDirection.normalized;
     }
+
     private bool IsSliding()
     {
         return _isSliding;
     }
+
     public void SetMovementSpeed(float speed, float duration)
     {
         _movementSpeed += speed;
         Invoke(nameof(ResetMovementSpeed), duration);
     }
+
     private void ResetMovementSpeed()
     {
         _movementSpeed = _startingMovementSpeed;
     }
+
     public void SetJumpForce(float force, float duration)
     {
         _jumpForce += force;
         Invoke(nameof(ResetJumpForce), duration);
     }
+
     private void ResetJumpForce()
     {
         _jumpForce = _startingJumpForce;
     }
+    
     public Rigidbody GetPlayerRigidbody()
     {
         return _playerRigidbody;

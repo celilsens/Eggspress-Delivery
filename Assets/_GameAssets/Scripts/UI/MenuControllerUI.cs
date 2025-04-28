@@ -1,7 +1,5 @@
 using MaskTransitions;
-using UnityEditorInternal;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuControllerUI : MonoBehaviour
@@ -15,11 +13,14 @@ public class MenuControllerUI : MonoBehaviour
     {
         _playButton.onClick.AddListener(() =>
         {
-            TransitionManager.Instance.LoadLevel(Consts.SceneNames.GAME_SCENE,0.25f);
+            TransitionManager.Instance.LoadLevel(Consts.SceneNames.GAME_SCENE, 0.25f);
+            AudioManager.Instance.Play(SoundType.TransitionSound);
+
         });
 
         _quitButton.onClick.AddListener(() =>
         {
+            AudioManager.Instance.Play(SoundType.ButtonClickSound);
             Application.Quit();
         });
     }
