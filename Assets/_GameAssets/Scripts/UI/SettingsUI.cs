@@ -25,10 +25,10 @@ public class SettingsUI : MonoBehaviour
 
     [Header("Settings")]
     [SerializeField] private float _animationDuration;
+    [SerializeField] private bool _isMusicActive = true;
+    [SerializeField] private bool _isSoundActive = true;
 
     private Image _blackBackgroundImage;
-    private bool _isMusicActive;
-    private bool _isSoundActive;
 
     private void Awake()
     {

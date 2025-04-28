@@ -13,7 +13,7 @@ public class BackgroundMusic : MonoBehaviour
         if(Instance != null)
         {
             Destroy(gameObject);
-        } 
+        }
         else
         {
             Instance = this;
