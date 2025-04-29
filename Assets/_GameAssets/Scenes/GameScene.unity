@@ -4153,7 +4153,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 457577511458179072, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: _jumpForce
-      value: 65
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4875160074551751749, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: m_Name
@@ -6348,7 +6348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75, y: 0}
+  m_AnchoredPosition: {x: -75, y: 0}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999763953
@@ -6415,7 +6415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7810,8 +7810,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1201675147}
   - {fileID: 999763952}
+  - {fileID: 1201675147}
   m_Father: {fileID: 1160456426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.54}
@@ -8418,7 +8418,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -75, y: 0}
+  m_AnchoredPosition: {x: 75, y: 0}
   m_SizeDelta: {x: 128, y: 128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201675148
@@ -8485,7 +8485,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9235,7 +9235,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 457577511458179072, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: _jumpForce
-      value: 65
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4875160074551751749, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: m_Name
@@ -9754,7 +9754,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 457577511458179072, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: _jumpForce
-      value: 65
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4875160074551751749, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: m_Name
@@ -12361,11 +12361,13 @@ MonoBehaviour:
   _soundButton: {fileID: 999763953}
   _resumeButton: {fileID: 773174927}
   _mainMenuButton: {fileID: 1416650120}
-  _musicActiveSprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
-  _musicPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
-  _soundActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
-  _soundPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
+  _musicActiveSprite: {fileID: 21300000, guid: b70c31f4b7494cf40ad2dfcb839120cf, type: 3}
+  _musicPassiveSprite: {fileID: 21300000, guid: 11231ee54f9eb5948b175a2a69b0d050, type: 3}
+  _soundActiveSprite: {fileID: 21300000, guid: 572d015c0604b0b49b09265a1072b1d4, type: 3}
+  _soundPassiveSprite: {fileID: 21300000, guid: 5f1b2ea972b168448b4c057a28eb7f2a, type: 3}
   _animationDuration: 0.3
+  _isMusicActive: 1
+  _isSoundActive: 1
 --- !u!4 &1881977798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8526600525449290414, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
@@ -12529,7 +12531,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5805811032348434836, guid: 8c40edd8564ec3143b6dbaf46c28de0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2600002
+      value: -4.75
       objectReference: {fileID: 0}
     - target: {fileID: 5805811032348434836, guid: 8c40edd8564ec3143b6dbaf46c28de0c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -128049,7 +128051,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 457577511458179072, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: _jumpForce
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4875160074551751749, guid: 18c1643fcdabffd4b81cb36adb621a9c, type: 3}
       propertyPath: m_Name

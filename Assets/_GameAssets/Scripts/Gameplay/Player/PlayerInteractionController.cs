@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerInteractionController : MonoBehaviour
 {
@@ -15,10 +16,10 @@ public class PlayerInteractionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<ICollectible>(out var collectible))
-        {
-            collectible.Collect();
-        }
+        ICollectible collectible = other.GetComponent<ICollectible>();
+        BoxCollider eggCollider = other.GetComponent<BoxCollider>();
+        eggCollider.enabled = false;
+        collectible?.Collect();
     }
 
     void OnCollisionEnter(Collision other)
@@ -28,7 +29,7 @@ public class PlayerInteractionController : MonoBehaviour
             boostable.Boost(_playerControler);
         }
     }
-    
+
     void OnParticleCollision(GameObject other)
     {
         if (other.TryGetComponent<IDamageable>(out var damageable))

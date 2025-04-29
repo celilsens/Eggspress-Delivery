@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using MaskTransitions;
 using UnityEngine;

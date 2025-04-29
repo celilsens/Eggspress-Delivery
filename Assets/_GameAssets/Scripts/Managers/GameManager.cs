@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
             CameraShake.Instance.ShakeCamera(1.5f, 2f, 0.5f);
             _isCatCatched = true;
         }
-
     }
 
     private void HealthManager_OnPlayerDeath()
@@ -70,8 +69,8 @@ public class GameManager : MonoBehaviour
         if (_currentEggCount == _maxEggCount)
         {
             //Situation WIN
-            _eggCounterUI.SetEggComplated();
             ChangeGameState(GameState.GameOver);
+            _eggCounterUI.SetEggComplated();
             _winLoseUI.OnGameWin();
         }
     }
@@ -87,7 +86,7 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.Play(SoundType.CatSound);
         }
     }
-    
+
     public GameState GetCurrentGameState()
     {
         return _currentGameState;
