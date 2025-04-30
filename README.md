@@ -50,7 +50,7 @@ You can find me on [LinkedIn](https://www.linkedin.com/in/celil-sen/)
 ## 🚀 How to Play
 
 1. Clone or download the project.
-2. Open it with **Unity 6.0 (600.0.47f1)** .
+2. Open it with **Unity 6.0 (600.0.47f1)** (or newer).
 3. Run the scene called `MainMenu`.
 4. Start the level, race the clock, and rescue those eggs! 🐣
 
